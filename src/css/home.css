@@ -65,8 +65,6 @@
   line-height: 28px;
 }
 
-
-
 .c_CC140D {
   color: #cc140d;
 }
@@ -232,8 +230,6 @@
 }
 
 @media (max-width: 768px) {
-
-
   .arrow-controls {
     display: flex;
     flex-direction: column;
@@ -284,7 +280,7 @@
 }
 
 @media (max-width: 576px) {
-  .Excellence{
+  .Excellence {
     bottom: -7px;
   }
   .productsec {
