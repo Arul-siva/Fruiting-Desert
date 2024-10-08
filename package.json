@@ -89,8 +89,10 @@
   
   },
   
+  "homepage": "https://USERNAME.github.io/Fruiting-Desert",
   "scripts": {
-  
+
+  "deploy": "gh-pages -d build",
     
   "start": "react-scripts start",
   
@@ -166,6 +168,16 @@
   
     
   ]
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "gh-pages": "^6.1.1",
+  
+    
+  "install": "^0.13.0"
   
   }
 }
