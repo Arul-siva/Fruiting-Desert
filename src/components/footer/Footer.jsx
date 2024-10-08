@@ -1,10 +1,6 @@
 import React, { act } from "react";
 import logo from "../../images/home/logo2.png";
-import facebook from "../../images/home/facebook-icon.png";
-import linkedin from "../../images/home/linkedin-icon.png";
-import twitter from "../../images/home/twitter-icon.png";
-import whatapp from "../../images/home/whatapp.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
@@ -18,6 +14,13 @@ import galleryimg4 from '../../images/home/galleryimg4.png'
 import galleryimg5 from '../../images/home/galleryimg5.png'
 import galleryimg6 from '../../images/home/galleryimg6.png'
 import how from '../footer/how.png'
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
+
+
+
 const Footer = () => {
   const [active, setActive] = useState("Home");
 
@@ -41,28 +44,32 @@ const Footer = () => {
               Fruiting Desert is dedicated to providing the freshest and highest
               quality fruits, sourced sustainably from local and exotic farms.
             </p>
-            <div className="d-flex ">
+            <div className="d-flex text-dark fs-30 ">
               <Link to="#">
-                <img src={facebook} className="img-fluid me-2 " alt="" />
+              <FaFacebookF className="callicon me-2"/>
+                {/* <img src={facebook} className="img-fluid me-2 " alt="" /> */}
               </Link>
               <Link to="#">
-                <img src={linkedin} className="img-fluid mx-2 " alt="" />
+              <FaLinkedinIn className="callicon me-2"/>
+                {/* <img src={linkedin} className="img-fluid mx-2 " alt="" /> */}
               </Link>
               <Link to="#">
-                <img src={twitter} className="img-fluid mx-2 " alt="" />
+              <FaXTwitter className="callicon me-2" />
+                {/* <img src={twitter} className="img-fluid mx-2 " alt="" /> */}
               </Link>
               <Link to="#">
-                <img src={whatapp} className="img-fluid mx-2 " alt="" />
+              <FaWhatsapp className="callicon me-2"/>
+                {/* <img src={whatapp} className="img-fluid mx-2 " alt="" /> */}
               </Link>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-2 footer">
             <h2 className="fw-700 py-3">Ouick Links</h2>
             <ul className="fw-500 fs-20 p-0 ">
-              <li><Link className="text-dark" to="/">Home</Link></li>
-              <li><Link className="text-dark" to="/about">About</Link></li>
-              <li><Link className="text-dark" to="/products">Product</Link></li>
-              <li><Link className="text-dark" to="/contact">Contact</Link></li>
+              <li><NavLink className={({isActive}) =>`fw-500 ${isActive ? `c_2C7D05 fw-700` :`text-black fw-500`} `} to="/">Home</NavLink></li>
+              <li><NavLink className={({isActive})=>`fw-500 ${isActive ? "c_2C7D05 fw-700" :"text-black fw-500"} `} to="/about">About</NavLink></li>
+              <li><NavLink className={({isActive})=>`fw-500 ${isActive ? "c_2C7D05 fw-700" :"text-black fw-500"} `} to="/products">Product</NavLink></li>
+              <li><NavLink className={({isActive})=>`fw-500 ${isActive ? "c_2C7D05 fw-700" :"text-black fw-500"} `} to="/contact">Contact</NavLink></li>
             </ul>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 my-2">

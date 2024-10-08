@@ -22,7 +22,6 @@ ul li.active {
   font-weight: 700;
 }
 
-
 .fw-600{
 font-weight: 600 !important;
 }
@@ -92,4 +91,16 @@ height: 170px;
   background-repeat: no-repeat;
   background-size: auto;
   background-position: bottom right;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.backtotop{
+  position: fixed;
+  right: 2%;
+  bottom:10%;
+  z-index: 1000;
+ font-size: 50px;
 }

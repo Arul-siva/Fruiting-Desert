@@ -115,9 +115,9 @@ const About = () => {
           <h1 className="fs-50 fw-700">About</h1>
         </div>
       </div>
-      <div className="container-fluid px-4  leaf2 ">
+      <div className="container-fluid px-4 ">
         <div className="row mx-3 mt-lg-5 mt-2 ">
-          <div className="col-md-7 col-12 ">
+          <div className="col-md-7 col-12  leaf1">
             <div className="position-relative">
               <img src={aboutimg2} className="img-fluid mb-3 w-100" alt="" />
               <p className="d-flex align-items-center fw-600 fs-24 Excellence">
@@ -140,8 +140,12 @@ const About = () => {
             <p className="my-3 mb-3 line-h fw-500 fs-18 text-justify">
               At Fruiting Desert, we don’t just sell fruits; we deliver a fresh
               experience that brings nature’s finest produce right to your
-              doorstep. Our story began with a vision to revolutionize the way
-              people enjoy fruits by offering unparalleled quality, variety, and
+              doorstep.
+            </p>
+            <p className="my-3 mb-3 line-h fw-500 fs-18 text-justify">
+              {" "}
+              Our story began with a vision to revolutionize the way people
+              enjoy fruits by offering unparalleled quality, variety, and
               service.
             </p>
           </div>
@@ -162,6 +166,9 @@ const About = () => {
               At Fruiting Desert, our mission is to revolutionize the way people
               experience fruits. We are dedicated to providing the freshest,
               most delicious fruits sourced from both local and exotic farms.
+            </p>
+            <p className="my-3 mb-3 fs-18 fw-500 line-h text-justify">
+              {" "}
               Every piece of fruit we offer is carefully selected to ensure it
               meets our high standards of quality and taste. We believe that
               everyone deserves access to nature’s best, and we are committed to
@@ -192,11 +199,14 @@ const About = () => {
               recognized for our commitment to quality, sustainability, and
               customer satisfaction. We envision a world where fresh,
               high-quality fruits are easily accessible to everyone,
-              contributing to a healthier and happier society. By continuously
-              innovating and improving our processes, we aim to set new
-              standards in the industry. Our vision extends beyond just selling
-              fruits. We aspire to create a community of fruit lovers who share
-              our passion for freshness, taste, and sustainability.
+              contributing to a healthier and happier society.
+            </p>
+            <p className="my-3 mb-3 fs-18  fw-500 text-justify">
+              {" "}
+              By continuously innovating and improving our processes, we aim to
+              set new standards in the industry. Our vision extends beyond just
+              selling fruits. We aspire to create a community of fruit lovers
+              who share our passion for freshness, taste, and sustainability.
             </p>
           </div>
         </div>
@@ -433,7 +443,9 @@ const About = () => {
                 <h2 className="fs-50 fw-700">+91 - 987 654 321</h2>
                 <div className="d-flex pt-3">
                   <Button_gr name="Make a Call" />
-                  <Button_border name="Contact Us" />
+                  <Link to="/contact">
+                    <Button_border name="Contact Us" />
+                  </Link>
                 </div>
               </div>
             </div>

@@ -38,7 +38,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Logocarousel from "../components/Logocarousel";
-
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { ref: sectionRef, inView } = useInView({
@@ -216,7 +216,7 @@ const Home = () => {
               </p>
               <div className="d-flex">
                 <Button_gr name="Shop Now" />
-                <Button_border name="Our Products" />
+               <Link to="/products"> <Button_border name="Our Products" /></Link>
               </div>
             </div>
             <div className="col-md-6 col-sm-12 col-12">
@@ -227,7 +227,7 @@ const Home = () => {
           </div>
           <div className="row py-5 mx-3">
             <div className="col-md-4 col-12 mb-3">
-              <div className="d-lg-flex d-block align-items-center justify-content-center gradient rounded-3">
+              <div className="d-lg-flex d-block align-items-center justify-content-center gradient rounded-3 py-4">
                 <img src={farm} className="img-fluid p-3" alt="" />
                 <div className="px-3 py-4 text-white">
                   <p className="fw-700 fs-20 mb-2">Farm - Fresh</p>
@@ -238,7 +238,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-12 mb-3">
-              <div className="d-lg-flex d-block align-items-center justify-content-center b_green rounded-3">
+              <div className="d-lg-flex d-block align-items-center justify-content-center b_green rounded-3 py-4">
                 <img src={Variety} className="img-fluid p-3" alt="" />
                 <div className="px-3 py-4 text-white">
                   <p className="fw-700 fs-20 mb-2">Wide Variety</p>
@@ -249,7 +249,7 @@ const Home = () => {
               </div>
             </div>
             <div className="col-md-4 col-12 mb-3">
-              <div className="d-lg-flex d-block align-items-center justify-content-center gradient2 rounded-3">
+              <div className="d-lg-flex d-block align-items-center justify-content-center gradient2 rounded-3 py-4">
                 <img src={Quality} className="img-fluid p-3" alt="" />
                 <div className="px-3 py-4 text-white">
                   <p className="fw-700 fs-20 mb-2">Quality Assurance</p>
@@ -289,7 +289,7 @@ const Home = () => {
                 top-quality fruits sourced from trusted local and exotic farms.
               </p>
 
-              <Button_gr name="Learn more" />
+             <Link to={"/about"} className=""> <Button_gr name="Learn more" /></Link>
             </div>
           </div>
         </div>
@@ -335,14 +335,14 @@ const Home = () => {
                 </p>
                 <p className="my-2 fw-600">
                   {" "}
-                  (120review) <Rate />
+                  (120review) <Rate disabled defaultValue={4} />
                 </p>
               </div>
             </div>
           ))}
           <div className="col-12 mb-5">
             <div className="mx-auto text-center my-4">
-              <Button_gr name="Learn more" />
+              <Link to="/products"><Button_gr name="Learn more" /></Link>
             </div>
           </div>
         </div>
@@ -371,22 +371,22 @@ const Home = () => {
                 value.
               </p>
               <p className="counting-numbers  my-4">
-                <div className="my-3">
+                <span className="my-3">
                   <span className=" CC140D fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{Days}</span> Days{" "}
                   </span>
                   <span className=" CC140D fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{hours}</span> Hrs{" "}
                   </span>
-                </div>
-                <div className="my-3">
+                </span>
+                <span className="my-3">
                   <span className=" b_green fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{minutes}</span> Mins{" "}
                   </span>
                   <span className=" b_green fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{seconds}</span> Secs{" "}
                   </span>
-                </div>
+                </span>
               </p>
               <div className=""></div>
             </div>
@@ -428,7 +428,7 @@ const Home = () => {
           <div className="col-lg-4 col-sm-4 col-12 ">
             <div className="text-center card-shadow p-3">
               <div className="text-center  Fresh-Deal">
-                <img src={cherry} className="img-fluid" alt="" />
+                <img src={mongo} className="img-fluid" alt="" />
                 <div className="Newfruit fw-700">Fresh Deal</div>
               </div>
               <p className="my-2 fw-700 fs-24">Cherries</p>
@@ -446,7 +446,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid pt-lg-5 pt-3 leaf4">
+      <div className="container-fluid pt-lg-5 pt-3 ">
         <Weforbest />
         <div className="row gradient p-lg-4 p-md-3 p-3" ref={sectionRef}>
           <div className="col-md-3 col-sm-6 col-12 client">
@@ -542,7 +542,7 @@ const Home = () => {
               <div className="productsec">
                 <img src={logo2} className="img-fluid py-4" alt="" />
                 <p className="m-0 fs-35">Exclusive</p>
-                <h4 class="card-title fs-50 fw-700">50% OFF</h4>
+                <h4 className="card-title fs-50 fw-700">50% OFF</h4>
                 <button className="gradient text-white btn py-2 px-3">
                   {" "}
                   Get a Deal
@@ -599,7 +599,7 @@ const Home = () => {
                           I love shopping at Fruiting Desert. Their selection is
                           amazing, and the quality is unbeatable.
                         </p>
-                        <Rate defaultValue={5} />
+                        <Rate defaultValue={5} disabled/>
                       </div>
                     </div>
                     <img
@@ -625,7 +625,7 @@ const Home = () => {
                           I love shopping at Fruiting Desert. Their selection is
                           amazing, and the quality is unbeatable.
                         </p>
-                        <Rate defaultValue={5} />
+                        <Rate defaultValue={5} disabled />
                       </div>
                     </div>
                     <img
@@ -651,7 +651,7 @@ const Home = () => {
                           I love shopping at Fruiting Desert. Their selection is
                           amazing, and the quality is unbeatable.
                         </p>
-                        <Rate defaultValue={5} />
+                        <Rate defaultValue={5} disabled />
                       </div>
                     </div>
                     <img

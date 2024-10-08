@@ -266,7 +266,8 @@ const Products = () => {
         <div className="row mx-lg-5 mx-3">
           {products.map((value, index) => (
             <div className="col-md-3 col-sm-4 col-12 my-3 " key={index}>
-              <div className="text-center card-shadow p-3">
+               <Link to="/product-list">
+              <div className="text-center card-shadow p-3 text-dark">
                 <div className="text-center  position-relative">
                   <img src={value.fruitimage} className="img-fluid" alt="" />
                   <div className="Newfruit fw-700">
@@ -283,6 +284,7 @@ const Products = () => {
                   (120review) <Rate defaultValue={4} />
                 </p>
               </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -418,22 +420,22 @@ const Products = () => {
                 limited time only!
               </p>
               <p className="counting-numbers  my-4">
-                <div className="my-3">
+                <span className="my-3">
                   <span className=" CC140D fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{Days}</span> Days{" "}
                   </span>
                   <span className=" CC140D fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{hours}</span> Hrs{" "}
                   </span>
-                </div>
-                <div className="my-3">
+                </span>
+                <span className="my-3">
                   <span className=" b_green fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{minutes}</span> Mins{" "}
                   </span>
                   <span className=" b_green fw-600 mx-2 fs-20 px-3 py-3   rounded-4">
                     <span className="fw-700 fs-35 ">{seconds}</span> Secs{" "}
                   </span>
-                </div>
+                </span>
               </p>
               <div className=""></div>
             </div>
@@ -511,7 +513,7 @@ const Products = () => {
                   Coming Soon, <span className="c_CC140D">Dragon Fruit</span>{" "}
                   <span className="c_2C7D05">Delight !</span>
                 </h2>
-                <Button_gr name="Contact Us" />
+                <Link to="/contact"><Button_gr name="Contact Us" /></Link>
               </div>
             </div>
           </div>

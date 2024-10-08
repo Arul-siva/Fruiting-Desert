@@ -24,13 +24,7 @@ const MyNavbar = () => {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav ms-auto fs-18">
             <li className="nav-item mx-lg-4 mx-md-1 mx-0 fw-600">
-              <NavLink
-                className={({ isActive }) => `nav-link fw-600 ${isActive ? "c_2C7D05 fw-700" : "text-black fw-600" }`
-                }
-                to="/"
-                end
-              >
-                Home
+              <NavLink className={({ isActive }) => `nav-link fw-600 ${isActive ? "c_2C7D05 fw-700" : "text-black fw-600" }`} to="/" end>Home
               </NavLink>
             </li>
             <li className="nav-item mx-lg-4 mx-md-1 mx-0">
